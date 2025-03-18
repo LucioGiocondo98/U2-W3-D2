@@ -1,14 +1,3 @@
-const updateSavedValue = function() {
-    const savedName = localStorage.getItem('name');
-    const savedValueElement = document.getElementById('savedValue');
-    if (savedName) {
-        savedValueElement.textContent = 'Nome salvato: ' + savedName;
-    } else {
-        savedValueElement.textContent = ''; 
-    }
-}
-
-updateSavedValue();
 
 //Salva
 const savedButton = document.getElementById('saveButton');
@@ -31,3 +20,14 @@ removeButton.addEventListener('click', function(e) {
     document.getElementById('name').value = ''; 
     updateSavedValue(); 
 });
+const updateSavedValue = function() {
+    const savedName = localStorage.getItem('name');
+    const savedValueElement = document.getElementById('savedValue');
+    if (savedName) {
+        savedValueElement.textContent = 'Nome salvato: ' + savedName;
+    } else {
+        savedValueElement.textContent = ''; 
+    }
+}
+
+updateSavedValue();
